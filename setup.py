@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 setup(
     name='Keep or Skip',
@@ -8,13 +8,13 @@ setup(
     author='2sleepy4u',
     author_email='riccardo.zancan00@gmail.com',
     license='BSD 2-clause',
-    packages=['skeep'],
+    packages=find_packages(),
     install_requires=[ 
         "pygame",
     ],
     entry_points={
         'console_scripts': [
-            'skeep=skeep.main:main',  # Adjust as needed
+            'skeep=skeep.__main__:main',  # Adjust as needed
         ],
     },
     classifiers=[
